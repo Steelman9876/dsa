@@ -1,7 +1,6 @@
 #include <climits>
 using namespace std;
 
-// Function to find the vertex with the minimum distance value
 int minDistance(int dist[], bool visited[], int V) {
 	int minDist = INT_MAX, minIndex = -1;
 
@@ -14,7 +13,6 @@ int minDistance(int dist[], bool visited[], int V) {
 	return minIndex;
 }
 
-// Function to implement Dijkstra's Algorithm
 void dijkstra(int graph[100][100], int V, int src) {
 	int dist[100];       // Array to store the shortest distance from src
 	bool visited[100];   // Array to mark visited vertices
@@ -29,13 +27,10 @@ void dijkstra(int graph[100][100], int V, int src) {
 
 	dist[src] = 0; // Distance from source to itself is 0
 
-	// Find shortest path for all vertices
 	for (int count = 0; count < V - 1; count++) {
-		// Pick the minimum distance vertex from the set of unvisited vertices
 		int u = minDistance(dist, visited, V);
 		visited[u] = true; // Mark the picked vertex as visited
 
-		// Update the distances of adjacent vertices
 		for (int v = 0; v < V; v++) {
 			if (graph[u][v] && !visited[v] && dist[u] != INT_MAX &&
 				dist[u] + graph[u][v] < dist[v]) {
@@ -45,7 +40,6 @@ void dijkstra(int graph[100][100], int V, int src) {
 		}
 	}
 
-	// Print the shortest distances and paths
 	cout << "Vertex\tDistance\tPath" << endl;
 	for (int i = 0; i < V; i++) {
 		cout << src << " -> " << i << "\t" << dist[i] << "\t\t";
@@ -156,7 +150,7 @@ int main() {
 
 1. Linked List
 
-• Singly
+â€¢ Singly
 
 
 
@@ -542,7 +536,7 @@ int main()
 
 }
 
-•      • Doubly
+â€¢Â Â Â Â Â  â€¢ Doubly
 
 
 
@@ -850,7 +844,7 @@ int main()
 
 
 
-•      • Circular Singly
+â€¢Â Â Â Â Â  â€¢ Circular Singly
 
 
 
@@ -1210,7 +1204,7 @@ int main()
 
 }
 
-•      • Doubly Circular
+â€¢Â Â Â Â Â  â€¢ Doubly Circular
 
 
 
@@ -1540,7 +1534,7 @@ int main()
 
 2. Stack
 
-• Array Based
+â€¢ Array Based
 
 
 
@@ -1670,7 +1664,7 @@ int main()
 
 }
 
-•      • Linked List Based
+â€¢Â Â Â Â Â  â€¢ Linked List Based
 
 
 
@@ -1806,7 +1800,7 @@ int main()
 
 
 
-•                • Array Based
+â€¢Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  â€¢ Array Based
 
 
 
@@ -1956,7 +1950,7 @@ int main()
 
 }
 
-•      • Linked List Based
+â€¢Â Â Â Â Â  â€¢ Linked List Based
 
 
 
@@ -2090,7 +2084,7 @@ int main()
 
 }
 
-•      • Double Ended Queue Array Based
+â€¢Â Â Â Â Â  â€¢ Double Ended Queue Array Based
 
 
 
@@ -2306,7 +2300,7 @@ int main()
 
 }
 
-•      • Double Ended Queue LL Based
+â€¢Â Â Â Â Â  â€¢ Double Ended Queue LL Based
 
 
 
@@ -2492,7 +2486,7 @@ int main()
 
 }
 
-•      • Priority Queue
+â€¢Â Â Â Â Â  â€¢ Priority Queue
 
 
 
